@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Sender</string>
+    <string name="hint_msg">Type your message here</string>
+    <string name="preview_title">Preview</string>
+</resources>
