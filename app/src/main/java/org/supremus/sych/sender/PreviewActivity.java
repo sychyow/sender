@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Objects;
 
@@ -34,6 +35,7 @@ public class PreviewActivity extends AppCompatActivity implements View.OnClickLi
         if (mailName==null) {
             btnSend.setText(R.string.mail_absent);
             btnSend.setEnabled(false);
+            Toast.makeText(this, getString(R.string.no_email_msg), Toast.LENGTH_LONG).show();
         } else {
             btnSend.setOnClickListener(this);
         }
