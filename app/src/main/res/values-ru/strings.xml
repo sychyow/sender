@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Посылатель</string>
+    <string name="hint_msg">Напечатайте здесь своё сообщение</string>
+    <string name="preview_title">Просмотреть</string>
+    <string name="mail_absent">Нет почты</string>
+    <string name="mail_subject">Домашка Android Academy</string>
+    <string name="preview_hint">Сообщение!</string>
+    <string name="e_mail">Е-почта</string>
+    <string name="no_email_msg">Нет приложения для почты</string>
+</resources>
