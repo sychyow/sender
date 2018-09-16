@@ -7,4 +7,5 @@
     <string name="mail_subject">Android Academy homework</string>
     <string name="preview_hint">This is the message!</string>
     <string name="e_mail">E-mail</string>
+    <string name="no_email_msg">No Email app found</string>
 </resources>

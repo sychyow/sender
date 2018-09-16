@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
 
     <EditText
         android:id="@+id/msg_text"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/msg_height"
+        android:layout_width="@dimen/msg_width"
+        android:layout_height="match_parent"
         android:ems="10"
         android:hint="@string/hint_msg"
         android:inputType="textMultiLine"
@@ -17,7 +17,7 @@
 
     <Button
         android:id="@+id/btn_preview"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/preview_title" />
 
