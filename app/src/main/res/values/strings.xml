@@ -2,4 +2,7 @@
     <string name="app_name">Sender</string>
     <string name="hint_msg">Type your message here</string>
     <string name="preview_title">Preview</string>
+    <string name="mail_absent">Can\'t E-mail</string>
+    <string name="mail_recipient">sychyow@outlook.com</string>
+    <string name="mail_subject">Android Academy homework</string>
 </resources>
