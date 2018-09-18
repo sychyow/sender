@@ -2,4 +2,5 @@
 <resources>
     <dimen name="msg_height">180dp</dimen>
     <dimen name="msg_width">360dp</dimen>
+    <dimen name="preview_font_size">36sp</dimen>
 </resources>
