@@ -16,6 +16,7 @@ import java.util.Objects;
 public class PreviewActivity extends AppCompatActivity implements View.OnClickListener{
 
     private final static String MSG = "MSG";
+    private static Intent intent = null;
 
     private TextView tvPreview;
     private Intent mailIntent;
@@ -42,7 +43,7 @@ public class PreviewActivity extends AppCompatActivity implements View.OnClickLi
     }
 
     public static void launch(Activity parent, String textMessage) {
-        final Intent intent = new Intent(parent, PreviewActivity.class);
+        if (intent==null) intent = new Intent(parent, PreviewActivity.class);
         intent.putExtra(MSG, textMessage);
         parent.startActivity(intent);
     }
