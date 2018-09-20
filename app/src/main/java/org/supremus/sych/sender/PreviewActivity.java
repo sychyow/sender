@@ -1,9 +1,7 @@
 package org.supremus.sych.sender;
 
 import android.app.Activity;
-import android.content.ComponentName;
 import android.content.Intent;
-import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -19,9 +17,7 @@ public class PreviewActivity extends AppCompatActivity implements View.OnClickLi
     private static Intent intent = null;
     private MailSender sender = null;
 
-
     private TextView tvPreview;
-    private Intent mailIntent;
 
     public static void launch(Activity parent, String textMessage) {
         if (intent==null) intent = new Intent(parent, PreviewActivity.class);
@@ -51,6 +47,7 @@ public class PreviewActivity extends AppCompatActivity implements View.OnClickLi
 
     @Override
     public void onClick(View v) {
-        sender.send(tvPreview.getText().toString());
+        Intent mailIntent = sender.getSendIntent(tvPreview.getText().toString());
+        startActivity(mailIntent);
     }
 }

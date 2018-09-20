@@ -4,29 +4,26 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 
-public class MailSender {
-    private Intent mailIntent;
+class MailSender {
+    private final Intent mailIntent;
     private ComponentName mailName = null;
-    private Context context;
 
-    MailSender(AppCompatActivity parent) {
-        context = parent;
+    MailSender(Context context) {
         mailIntent = new Intent(Intent.ACTION_SENDTO);
         mailIntent.setType("text/plain");
-        mailIntent.setData(Uri.parse(String.format("mailto:%s", parent.getString(R.string.mail_recipient))));
-        mailIntent.putExtra(Intent.EXTRA_EMAIL, new String[] {parent.getString(R.string.mail_recipient)});
-        mailIntent.putExtra(Intent.EXTRA_SUBJECT, parent.getString(R.string.mail_subject));
-        mailName = mailIntent.resolveActivity(parent.getPackageManager());
+        mailIntent.setData(Uri.parse(String.format("mailto:%s", context.getString(R.string.mail_recipient))));
+        mailIntent.putExtra(Intent.EXTRA_EMAIL, new String[] {context.getString(R.string.mail_recipient)});
+        mailIntent.putExtra(Intent.EXTRA_SUBJECT, context.getString(R.string.mail_subject));
+        mailName = mailIntent.resolveActivity(context.getPackageManager());
     }
 
     public boolean hasActivity() {
         return mailName != null;
     }
 
-    public void send(String text) {
+    public Intent getSendIntent(String text) {
         mailIntent.putExtra(Intent.EXTRA_TEXT, text);
-        context.startActivity(mailIntent);
+        return mailIntent;
     }
 }
